@@ -26,7 +26,8 @@ mgmt_account_id = get_mgmt_account_id()
 
 def handler(event, context):
     account = []
-    deployed_in_mgmt = True if ACCOUNT_ID == mgmt_account_id else False
+    # deployed_in_mgmt = True if ACCOUNT_ID == mgmt_account_id else False
+    deployed_in_mgmt = True
     try:
         p = client.get_paginator('list_accounts')
         paginator = p.paginate()

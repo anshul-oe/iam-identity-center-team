@@ -111,8 +111,8 @@ def handler(event, context):
     id = event['id']
     permissions = []
     mgmt_ps = get_mgmt_ps()
-    deployed_in_mgmt = True if ACCOUNT_ID == mgmt_account_id else False
-    deployed_in_mgmt = True if ACCOUNT_ID == mgmt_account_id else False
+    # deployed_in_mgmt = True if ACCOUNT_ID == mgmt_account_id else False
+    deployed_in_mgmt = True
     try:
         p = client.get_paginator('list_permission_sets')
         paginator = p.paginate(InstanceArn=sso_instance['InstanceArn'])

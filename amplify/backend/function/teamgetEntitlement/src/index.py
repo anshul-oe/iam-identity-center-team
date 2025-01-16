@@ -79,7 +79,8 @@ def publishPolicy(result):
 
 
 def list_account_for_ou(ouId):
-    deployed_in_mgmt = True if ACCOUNT_ID == mgmt_account_id else False
+    # deployed_in_mgmt = True if ACCOUNT_ID == mgmt_account_id else False
+    deployed_in_mgmt = True
     account = []
     client = boto3.client("organizations")
     try:
